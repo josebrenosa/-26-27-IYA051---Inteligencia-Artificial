@@ -6,9 +6,7 @@ Ahí hay 5 carpetas con ejercicios a trabajar con sus códigos. Además de hacer
 
 Para el Ej01:
 1.1 ¿Cuál es el objetivo principal de la regresión lineal en este ejercicio?
-
 1.2 ¿Qué representan las variables X e y en el código y cómo se formalizan (tipo de estructura de datos)?
-
 1.3 ¿Qué hace el siguiente código?
 regr = LinearRegression()
 regr.fit(X_train, y_train)
