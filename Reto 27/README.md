@@ -1,6 +1,4 @@
-# Reto 27
-
-# Explorando Algoritmos de enjambre y cúmulos de partículas
+# Reto 27 - Explorando Algoritmos de enjambre y cúmulos de partículas
 
 Trabaja los 2 ejemplos del campus analizandoo su funcionamiento e infiriendo los conceptos teóricos explicados en clase.
 
