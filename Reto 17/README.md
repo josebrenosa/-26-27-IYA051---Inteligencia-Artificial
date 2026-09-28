@@ -1,22 +1,49 @@
-# Reto 17
+# Reto 17 - Clasificación: Redes Neuronales
 
-Tema: ML: Clustering: DBScan
+Ejemplo Suma de tres números:
+- ¿Por qué es necesario generar los datos de entrada (X1, X2, X3) y salida (y) de forma aleatoria?
+- ¿Por qué cuando sumas 3 números enteros, la salida de esta red neuronal no es un entero?
+- ¿Qué podría ocurrir si los tres vectores de entrada estuvieran correlacionados (por ejemplo, X2 = X1 + 1)?
+- ¿Por qué la matriz X debe tener forma (n_muestras, 3) mientras que y es un vector de una sola dimensión?
+- ¿Cómo se relaciona esta estructura con la cantidad de neuronas en la capa de entrada y salida?
+- ¿Cuál es el propósito de dividir los datos en X_train/y_train y X_test/y_test?
+- ¿Qué podría pasar si usáramos todos los datos para entrenamiento?
+- En la línea mlp = MLPRegressor(hidden_layer_sizes=(10), max_iter=500), ¿qué significa tener una capa oculta con 10 neuronas? ¿Cómo afectaría el desempeño si se aumentara o disminuyera este número
+- Durante el entrenamiento se muestra el valor de loss por iteración.
+- ¿Qué representa este valor y qué nos indica su evolución a lo largo de las iteraciones?
+- ¿Por qué se usa la correlación entre predictions y y_test como métrica? ¿Qué otras métricas podrías usar para evaluar el rendimiento de una red neuronal en un problema de regresión?
+- En el código final se predice para X_pred = [[5, 12, 6]]. ¿Qué significa el valor obtenido (y_pred) en términos del aprendizaje de la red? ¿Podría la red predecir correctamente para números fuera del rango de entrenamiento (por ejemplo, mayores que 100)?
 
-Ejemplo 1:
-- ¿Qué sucede con el número de clusters detectados cuando modificas el parámetro eps (radio)?
-Elabora una tabla con varios valores de eps (por ejemplo: 0.05, 0.1, 0.14, 0.2, 0.3) y anota el número de clusters obtenidos y la cantidad de ruido.
-- Manteniendo fijo eps, ¿cómo cambia la cantidad de ruido y la forma de los clusters cuando varías min_samples? Prueba valores como 3, 5, 10, 20 y explica por qué DBSCAN cambia su comportamiento.
-- ¿Por qué algunas métricas como Silhouette o Adjusted Rand Index aumentan o disminuyen cuando cambias eps? 
-- Usando los resultados gráficos, identifica ejemplos de puntos núcleo, borde y ruido. ¿Cómo se diferencian en el código (core_samples_mask)? Qué condiciones debe cumplir un punto para ser núcleo y cómo DBSCAN clasifica el resto?
-- Si reemplazaras DBSCAN por K-Means en este mismo dataset, ¿qué diferencias esperarías en el resultado? Razona pensando en la forma de los clusters y la presencia de ruido.
-- Modifica el dataset aumentando cluster_std a valores como 0.7 o 1.0. ¿DBSCAN sigue detectando bien los clusters? ¿Qué ajustes de eps son necesarios? Identifica si es robusto DBSCAN paradatos más dispersos.
-- ¿Cuál sería, según tus experimentos, una estrategia práctica para elegir un buen valor de eps para este dataset? Pista: analizar distancias y revisar cuántos puntos quedan como ruido, balancear número de clusters y métricas.
+Clasificación MLP puntos colores.
+- ¿Qué representan las matrices X e y en el contexto de esta práctica? Explica qué significan las filas y columnas de X, y qué valores puede tomar y. 
+- El código separa el dataset en entrenamiento y test mediante ntrain = int(3*len(y)/4). ¿Por qué es importante reservar una parte de los datos para validación (test)? ¿Qué consecuencias tendría entrenar y validar con el mismo conjunto?
+- La red se define con MLPClassifier(hidden_layer_sizes=(10,10,10), activation='relu'). Explica qué significan los parámetros hidden_layer_sizes y activation. ¿Por qué podría ser útil utilizar varias capas ocultas en lugar de una sola? 
+- ¿Qué nos indica la forma de la gráfica de la función de coste (loss_curve_) a lo largo de las iteraciones? Si la curva no disminuye o muestra oscilaciones grandes, ¿qué factores podrían estar afectando el aprendizaje?
+- ¿En qué nos ayuda hacer la matriz de confusión? 
+- El código final muestra los falsos positivos en color naranja (plt.scatter(...)). ¿Qué información aporta esta visualización sobre el comportamiento del modelo? ¿Cómo podrías usar esta gráfica para mejorar la red o entender sus limitaciones?
 
-Ejemplo02:
-- ¿Qué ocurre si cambias el valor de eps a uno más pequeño o más grande? Observa cuántos clusters aparecen
-- ¿Aumenta o disminuye el ruido cuando subes el valor de min_samples?
-- ¿Qué pasa si generas menos clusters (por ejemplo, 10 en vez de 50)? ¿DBSCAN los detecta mejor?
-- Cuando cambias x_mult o y_mult, ¿cómo cambia la forma de los clusters generados?
-- ¿DBSCAN detecta bien los clusters muy alargados o los fragmenta?
-- Si los offsets (x_off y y_off) separan más los clusters, ¿es más fácil para DBSCAN encontrarlos?
-- ¿Dónde ves más puntos de ruido: cerca de los bordes, en zonas aisladas o repartidos por todo el gráfico?
+Clasificación Red Neuronal Secuencial Keras
+- En el código se define la red con model = Sequential(). Explica qué significa crear un modelo “secuencial” en Keras y cómo se agregan las capas al modelo.
+- Observa la instrucción model.add(Dense(4, input_dim=2, activation='relu')). ¿Qué representa el parámetro input_dim y por qué se indica su valor en la primera capa pero no en las siguientes?
+- En la línea model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']), ¿qué realiza internamente el optimizador Adam y por qué es adecuado para este tipo de problema?
+- En el entrenamiento se utiliza model.fit(X, y, epochs=10, batch_size=128). Explica qué sucede dentro de una época y qué función cumple el tamaño de lote (batch_size) durante el proceso de ajuste.
+
+Puerta XOR:
+- Por qué el problema de la compuerta XOR no puede resolverse con un modelo lineal simple? Explica qué papel juega la capa oculta en permitir que la red neuronal lo aprenda correctamente.
+- En el código se define model.add(Dense(16, input_dim=2, activation='relu')). ¿Por qué se elige una función de activación no lineal como ReLU para la capa oculta y sigmoid para la salida?
+- La red se entrena con loss='mean_squared_error' y optimizer='adam'. ¿Qué hace el optimizador Adam durante el entrenamiento y cómo ajusta los pesos de la red?
+- El entrenamiento usa epochs=1000. ¿Qué representa una “época” en este contexto y cómo podrías detectar si la red está sobreentrenando (overfitting)?
+- En la salida final se obtiene binary_accuracy: 100.00%. ¿Qué significa este resultado en términos del aprendizaje del modelo? ¿Podría esta red generalizar si se le presentaran combinaciones distintas de entrada?
+
+Ejemplo OCR Números:
+
+¿Por qué es necesario transformar las imágenes de 28x28 píxeles en vectores de tamaño 784 antes de entrenar la red neuronal (X_train.reshape((60000, 28 * 28)))? Explica qué representa cada valor del vector resultante.
+n el código se normalizan los datos dividiendo por 255 (X_train = X_train.astype('float32') / 255). ¿Qué efecto tiene esta normalización sobre el entrenamiento de la red y por qué es importante?
+Se define una capa de salida con activation='softmax'. ¿Qué hace esta función de activación y cómo permite al modelo clasificar una imagen entre las 10 posibles clases (dígitos 0–9)?
+La función de pérdida usada es 'categorical_crossentropy'. ¿Por qué se utiliza esta función en lugar de otras como 'mean_squared_error' y qué representa su valor durante el entrenamiento?
+El modelo se guarda y luego se vuelve a cargar desde disco (network.save_weights("network_weights.h5")). ¿Qué ventajas tiene este proceso de guardado y carga de pesos? ¿En qué situaciones prácticas resulta útil?
+¿Por qué es necesario transformar las imágenes de 28x28 píxeles en vectores de tamaño 784 antes de entrenar la red neuronal (X_train.reshape((60000, 28 * 28)))? Explica qué representa cada valor del vector resultante.
+n el código se normalizan los datos dividiendo por 255 (X_train = X_train.astype('float32') / 255). ¿Qué efecto tiene esta normalización sobre el entrenamiento de la red y por qué es importante?
+Se define una capa de salida con activation='softmax'. ¿Qué hace esta función de activación y cómo permite al modelo clasificar una imagen entre las 10 posibles clases (dígitos 0–9)?
+La función de pérdida usada es 'categorical_crossentropy'. ¿Por qué se utiliza esta función en lugar de otras como 'mean_squared_error' y qué representa su valor durante el entrenamiento?
+El modelo se guarda y luego se vuelve a cargar desde disco (network.save_weights("network_weights.h5")). ¿Qué ventajas tiene este proceso de guardado y carga de pesos? ¿En qué situaciones prácticas resulta útil?
