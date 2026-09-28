@@ -1,38 +1,37 @@
-# Reto 26 - Sistemas Inmunes Artificiales
+# Reto 26 - Retos de Computación Evolutiva
 
-CSA_Ej01
-1.- El algoritmo clona cada solución “élite” un número igual al tamaño del conjunto seleccionado (len(selected)). Si aumentáramos num_best de 5 a 10 sin cambiar nada más, ¿cómo afectaría esto al equilibrio entre explotación y exploración del algoritmo? 
-2.- Enel coddigo la tasa de mutación (mutation_rate) es fija a lo largo de toda la ejecución. Imagina que la mutación fuera adaptativa (alta al inicio y baja al final). ¿Cómo cambiaría esto la dinámica de búsqueda del CSA en comparación con usar una mutación constante como en este ejercicio?
-
-CSA_Ej02
-1.-  En este algoritmo, un detector se considera válido solo si su afinidad con todos los datos normales es mayor que un umbral (threshold). ¿Qué efecto tendría reducir drásticamente el valor de threshold (por ejemplo, de 0.5 a 0.1) en la capacidad del sistema para detectar anomalías?
-2.- En la fase de clonación, cada detector genera tantos clones como detectores hay (len(detectors)), y luego todos se mutan con una tasa fija (mutation_rate). ¿Qué consecuencias tendría aumentar la tasa de mutación a valores muy altos (por ejemplo, 1.0 o más) sobre la estabilidad y especialización de los detectores a lo largo de las generaciones?
-
-NSA_Ej01
-1.-  En este NSA, el parámetro clave es el radio de tolerancia (radius) que determina cuándo un detector reacciona a un dato.
-¿Qué aocurriría al aumentar el valor de radius (por ejemplo, de 0.2 a 0.5) tanto en la fase de generación de detectores como en la fase de detección de anomalías?
-2.-  El algoritmo genera detectores de forma aleatoria dentro de un rango grande (bounds = (0,5)), aunque los datos normales solo ocupan el intervalo (0,1). ¿como influye el rango de detectores sobre la eficiencia y la utilidad real de los detectores generados?
-
-NSA_Ej02
-1.-  En este ejemplo, el rango de los detectores (bounds = (10, 50)) es mucho más amplio que el rango en el que realmente se encuentran las anomalías (30–40). ¿Cómo influye ea la eficiencia del proceso de generación de detectores y a la capacidad del algoritmo para cubrir adecuadamente la región anómala?
-2.- El radio de detección se ha fijado en un valor relativamente grande (radius = 1.0). ¿Qué pasa al disminuir este valor (por ejemplo, a 0.3) en la sensibilidad del sistema para detectar anomalías, pero también en la probabilidad de generar detectores válidos?
-
-AIN_Ej01
-1.-  El algoritmo selecciona las “mejores células” midiendo, para cada célula, su distancia mínima a los datos.
-¿Cómo influye el valor de num_best (por ejemplo, elegir 5 vs. 15 mejores células) al equilibrio entre diversidad y precisión en la representación de los clusters?
-2.- La tasa de mutación (mutation_rate) controla cuánto se desplazan los clones respecto a las mejores células.
-Si aumentáramos este valor significativamente (por ejemplo, de 0.1 a 0.5), ¿cómo cambiaría la dinámica del algoritmo en términos de exploración del espacio y estabilidad de los clusters emergentes?
+Ejercicio 01:
+1. ¿Por qué en esta práctica los individuos se representan con cromosomas binarios de 4 bits?
+Explica qué limita y qué posibilita esta longitud del cromosoma según el intervalo [0–15] definido en la función fitness.
+2. La Función Fitness f(x)=∣ x−52+sin(x) ∣ ¿Qué rol cumple esta función dentro del algoritmo genético y por qué afecta directamente a la probabilidad de selección de cada individuo?
+Utiliza como referencia el cálculo de fitness mostrado para las generaciones iniciales.
+3. se calcula la probabilidad de selección de cada individuo como: pi=fif1+f2 ¿Qué interpretas cuando un individuo tiene probabilidad 1 o probabilidad 0, como ocurre en la Generación 1?
+Explica cómo esto influye en las siguientes etapas del algoritmo.
+4. Usando el procedimiento explicado en la página donde se muestra el punto de corte y su selección aleatoria: ¿Qué efecto tiene elegir un punto de corte más cercano al inicio o al final del cromosoma?
+5. Mutación: La probabilidad de mutación es 0.3 y en el código se revisa bit por bit. ¿Por qué es importante incluir mutación en un algoritmo genético y qué consecuencias se observan cuando esta probabilidad es alta, como se ve en las primeras generaciones del ejemplo?
+6. Según el resultado obtenido, el mejor valor aparece en la Generación 2, donde se alcanza x = 11 con fitness ≈ 5.9999. ¿Por qué el algoritmo encuentra tan rápido el mejor individuo en esta práctica?
+Comenta sobre el tamaño de población (2 individuos), longitud del cromosoma y forma de la función fitness.
+7. Experimenta con parámetros modificand: la probabilidad de emparejamiento, la probabilidad de mutación, número de individuos... ¿Qué predicen que ocurrirá con la velocidad de convergencia y la diversidad genética?
 
 
-AIN_Ej02
-1.-  En este algoritmo, siempre se seleccionan las num_best células con mayor valor de fitness, lo que empuja la población hacia las regiones de mayor rendimiento.¿Qué efecto tendría aumentar num_best (por ejemplo, de 5 a 15) en la capacidad del AIN para preservar múltiples óptimos locales en una función como esta, que tiene varios picos?
-2.- La tasa de mutación (mutation_rate) controla la amplitud de exploración alrededor de los mejores puntos.
-Si se disminuye demasiado (por ejemplo, de 0.05 a 0.005), ¿qué consecuencias tendría en la exploración del espacio y en la capacidad de encontrar óptimos locales más pequeños o alejados?
+Ejercicio 02
+1. En este código, cada individuo (cromosoma) está representado por una lista donde cada posición indica una columna y el número en esa posición indica la fila de la reina. ¿Qué ventajas tiene usar esta representación (permuta de 0 a n-1) en comparación con usar una matriz 8×8 con ceros y unos? Explica cómo esta representación reduce automáticamente ciertos tipos de conflictos.
+2. La función fidoneidad() incrementa el fitness cada vez que una reina NO está en conflicto con otra (ni en la misma fila ni en diagonal). ¿Por qué el valor máximo de fitness para un tablero de n casillas es: n^2−n  ? Relaciona esta fórmula con la cantidad de pares de reinas que pueden evaluarse.
+3.El método seleccion() simplemente escoge un individuo al azar: return rnd.choice(poblacion) Qué efectos puede tener este tipo de selección aleatoria sobre la velocidad de convergencia y la diversidad genética, en comparación con métodos como torneo o ruleta?  Pon un ejemplo para un tablero de 8×8.  
+4. La mutación sustituye una posición del genoma por un valor aleatorio que no esté duplicado: genes[n] = genX if genX in genes else genY ¿Por qué el algoritmo evita repetir números en el cromosoma, y qué problema generaría permitir duplicados en la solución? 
+5. Escalabilidad del algoritmo. El documento indica que para 9 casillas el tiempo de ejecución "se dispara" en comparación con tableros de 4 a 8 casillas. ¿Qué aspectos del algoritmo (representación, fitness, selección o mutación) contribuyen a que el tiempo crezca tanto al aumentar el tamaño del tablero?
 
-DCA_Ej01
-1.-  En este algoritmo, el potencial de activación combina señales benignas, de peligro y de contexto mediante la fórmula: "Activacion=danger+context−benign " y los candidatos se seleccionan según el valor más alto de activación.
-¿Qué efecto tendría modificar la ponderación de estas señales (por ejemplo, aumentando la influencia de la señal “benigna” o reduciendo la de “danger”), sobre la capacidad del DCA para identificar regiones prometedoras de la función objetivo?
-2.- En cada generación, el algoritmo selecciona los num_best candidatos con mayor activación y luego genera muchas mutaciones alrededor de ellos (tantas como num_best^2). Si se aumentara significativamente num_best (por ejemplo, de 5 a 15), ¿cómo afectaría esto la exploración del espacio y la estabilidad del DCA en la búsqueda del óptimo?
+
+Ejercicio 03:
+1.  ¿Cómo se relaciona la función distancia() del código con el concepto de función de fitness y por qué minimizar la distancia equivale a maximizar la aptitud del individuo?
+2. Selección determinista vs. selección evolutiva: ¿Qué consecuencias tiene usar un método de selección completamente determinista sobre la diversidad de la población y el riesgo de convergencia prematura?
+Relaciona tu respuesta con el comportamiento observado en las primeras generaciones del ejemplo.
+3.  La función mutacion() genera nuevos valores en un intervalo: [numero_seleccionado−rango, numero_seleccionado+rango]
+¿Cómo afecta el valor elegido por el usuario para rango_mutacion al equilibrio entre exploración (buscar lejos) y explotación (afinar búsqueda)? Da ejemplos de valores pequeños y grandes.
+4. Comportamiento del algoritmo con diferentes parámetros, el usuario puede elegir: número de individuos, número de generaciones, rango de mutación, y límites inferior y superior de búsqueda. DEducir el número de individuos o el rango de búsqueda inicial a la probabilidad de encontrar el número objetivo antes del límite de generaciones?
+Explica qué parámetro es más crítico y por qué.
+5.  la metáfora evolutiva depende de población, entorno, competición ,adaptación. ¿Cómo se refleja esta metáfora en este código, considerando que solo un individuo (el más apto) “lidera” y los demás se mueven alrededor de él en cada generación? Comenta si este modelo representa una “evolución realista” o más bien una búsqueda guiada por explotación intensa.
+
 
 DCA2_Ej02
 1.- En este DCA, las señales “benign”, “danger” y “context” se construyen a partir del rango normal (20–25).
