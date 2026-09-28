@@ -16,7 +16,6 @@ Actividades sugeridas:
 
 
 Info del A*:
-https://csis.pace.edu/~benjamin/teaching/cs627/webfiles/Astar.pdf
 https://www.youtube.com/watch?v=-L-WgKMFuhE
 
 
