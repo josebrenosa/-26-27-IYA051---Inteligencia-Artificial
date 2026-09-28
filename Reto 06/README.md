@@ -1,5 +1,4 @@
 # Reto 06 - Visión artificial clásica
-# Planteamiento inicial de cara al examen parcial
 
 Tema: Visión artificial clásica
 
