@@ -5,7 +5,7 @@ Tema: GNC de robots: Pathplanning y Pathfollowing
 Descripción: Fundamentos de guiado, navegación y control (GNC) para robots: planificación de trayectorias (path planning) y seguimiento de trayectorias (path following).
 
 Actividades ya hechas:
-- Implementar A* u otro algoritmo de pathplanning
+- Implementar A* u otro algoritmo de pathplanning. A* [algoritmo A-estrella]: https://www.youtube.com/watch?v=-L-WgKMFuhE
 - Esquivar obstáculos mediante estrategias de pathfollowing.
 
 Actividades sugeridas:
@@ -17,3 +17,5 @@ Actividades sugeridas:
 Un mapa complicado podría ser este:
 https://github.com/josebrenosa/-25-26-IYA051---Inteligencia-Artificial/blob/main/Reto%2005/Mapa_Ex02_NOrobots_OK.bmp
 En el mapa se presentan ciertos pixeles en rojo, son objetivos a encontrar (Por si se quiere jugar con ellos).
+
+
