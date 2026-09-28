@@ -1,4 +1,4 @@
-# Reto 23 # Visión Artificial con Deep Learning
+# Reto 23 - Visión Artificial con Deep Learning
 
 Descripción: Enfoque de visión por computador con redes neuronales Convolucionales (CNN avanzadas)
 
