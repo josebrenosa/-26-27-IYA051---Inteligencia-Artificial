@@ -3,6 +3,7 @@
 En "Materiales de la asignatura" > "Machine Learning" > "Regresión"
 Ahí hay 5 carpetas con ejercicios a trabajar con sus códigos. Además de hacer que funcionen en un cuaderno de Google Colab, con los correspondientes comentarios de haber entendido el código, hay que responder las siguientes cuestiones:
 
+
 Para el Ej01:
 1.1 ¿Cuál es el objetivo principal de la regresión lineal en este ejercicio?
 1.2 ¿Qué representan las variables X e y en el código y cómo se formalizan (tipo de estructura de datos)?
