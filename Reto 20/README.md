@@ -1,5 +1,7 @@
 # Reto 20 - Clustering: kMeans
 
+[a completar]
+
 Responder estas preguntas para el ejemplo disponible:
 - ¿Qué tipo de aprendizaje automático se utiliza en este ejemplo y por qué?
 - ¿Cuál es el objetivo del algoritmo K-Means aplicado a la base de datos IRIS?
