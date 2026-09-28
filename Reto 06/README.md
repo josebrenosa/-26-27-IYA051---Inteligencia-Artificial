@@ -1,23 +1,23 @@
-# Reto 06 - 
+# Reto 06 - Terminología en I.A.
 
-Explorando terminologia de la asignatura
+Explorando terminologia de la asignatura.
 
--------Visión artificial clásica--------
+Elaborar una "Historia de la inteligencia artificial", considerando el concepto ampliado de "Inteligencia artificial". Encontraréis sistemas inteligentes anteriores al año 0.
 
-Tema: Visión artificial clásica
+Tipos de inteligencia artificial. Elabora 5 taxonomías de la I.A.. Una de ellas, que sea distinta al nivel de inteligencia, amplíala en 3 subniveles.
 
-Descripción: Técnicas clásicas de visión por computador: detección de bordes, filtrado, transformadas, extracción de características (SIFT/ORB) y procesamiento de imágenes.
+Elabora una taxonomía según el nivel de inteligencia. 
 
-Actividades sugeridas:
-- Quitar el fondo.
-- Detectar objetos en una imagen.
-- trabajar espacios de color para los brillos y colores.
-- detectar contornos.
-- detectar objetos --> segmentacion.
+Define (para sustentar tu definición deberás utilizar al menos 3 referencias de bibliografía científica): 
+- Machine Learning
+- Aprendizaje Supervisado
+- Aprendizaje No Supervisado
+- Aprendizaje por refuerzo
+- Deep Learning
 
-Imágenes para trabajar: Campus virtual > Ejercicios > Vision Artificial > Vision Artificial clasica (tradicional)
-20251010_111257.jpg
-20251010_114845.jpg
-Vision_Artificial_Clasica_RETO_Quitarfondo.ipynb
-
+Define (para sustentar tu definición deberás utilizar al menos 1 referencias de bibliografía científica): 
+- Sistema experto
+- Desambiguación entre: Algoritmo / Tecnología / Técnica / Modelo / Arquitectura / Sistema / Procedimiento / Método / Enfoque / Paradigma
+- Desambiguación entre: Framework / Aplicación / Librería / IDE / Simulador / Programa / Código
+- Desambiguación entre: Parámetro / Hiperparámetro / Característica / Etiqueta / Métrica / Predicción / Dataset / Instancia(muestra) 
 
