@@ -25,4 +25,3 @@ Ejercicio 02: Botánica
 Ejercicio 03: Crea tu propio código basado en kNN. 
 
 
-Tema: ML: 
