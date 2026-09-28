@@ -16,3 +16,11 @@ Cada alumno deberá:
 
 5) En base a tu definición de "Inteligencia artificial", pon varios ejemplos de sistemas que tengan "inteligencia artificial" (ejemplos que abarquen todo el rango de lo que tú creas que puede tener "inteligencia artificial").
 
+
+Cómo lo hacemos: 
+Exploramos bibliografía científica chateando con LLM.
+Introducción a los modelos de lenguaje de gran tamaño (LLM): capacidades, limitaciones y casos de uso. Objetivo: experimentar con prompts y evaluar respuestas. Explorar el mundo de la investigación en un area emergente como la IA.
+- Práctica de prompt engineering.
+- Evaluar sesgos y errores típicos.
+- Ver los límites de LLM
+
