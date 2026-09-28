@@ -1,4 +1,8 @@
-# Reto 06 - Visión artificial clásica
+# Reto 06 - 
+
+Explorando terminologia de la asignatura
+
+-------Visión artificial clásica--------
 
 Tema: Visión artificial clásica
 
