@@ -19,8 +19,5 @@ Cada alumno deberá:
 
 Cómo lo hacemos: 
 Exploramos bibliografía científica chateando con LLM.
-Introducción a los modelos de lenguaje de gran tamaño (LLM): capacidades, limitaciones y casos de uso. Objetivo: experimentar con prompts y evaluar respuestas. Explorar el mundo de la investigación en un area emergente como la IA.
-- Práctica de prompt engineering.
-- Evaluar sesgos y errores típicos.
-- Ver los límites de LLM
+Introducción a los modelos de lenguaje de gran tamaño (LLM): capacidades, limitaciones y casos de uso. Objetivo: experimentar con prompts y evaluar respuestas. Explorar el mundo de la investigación en un area emergente como la IA practicando prompt engineering, evaluando sesgos y errores típicos y viendo los límites de LLM.
 
