@@ -1,6 +1,6 @@
 # Reto 15 - Clasificación: SVM
 
-Para los ejercicios en el campus:
+Para los ejercicios disponibles en el campus virtual:
 
 Ej01: Responder las siguientes preguntas:
 - Qué es un modelo de clasificación SVM y cuál es el principio fundamental en el que se basa para separar las clases de datos?
