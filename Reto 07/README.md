@@ -56,7 +56,7 @@ Esto evita, por ejemplo, que "reconocer un dado" sea mucho más sencillo que int
 | **Baraja española** | Detectar cartas | Identificar palo y valor en un subconjunto acordado | Contar cartas por palo/valor y calcular una propiedad de la mano |
 | **Dados** | Detectar dados | Determinar valor 1–6 | Sumar valores e identificar combinaciones/jugadas definidas |
 | **Dados de póker** | Detectar dados | Identificar las seis caras/símbolos | Reconocer jugada: pareja, dobles parejas, trío, póker, etc. |
-| **Puzle infantil de cubos** | Detectar cubos/piezas | Identificar cara/pieza por color y forma | Determinar configuración, orden correcto o piezas ausentes |
+| **Puzle infantil de cubos 3x3** | Detectar cubos/piezas | Identificar cara/pieza por color y forma | Determinar configuración, orden correcto o piezas ausentes |
 | **Monedas y billetes** | Detectar cada elemento | Identificar denominación | Calcular número de elementos y **valor monetario total** |
 | **Tornillos, tuercas y arandelas** | Segmentar cada pieza | Clasificar mediante área, perímetro, circularidad/excentricidad | Conteo por clase y detección de pieza incorrecta |
 | **LEGO** | Detectar piezas | Clasificar por color + tamaño/tipo | Inventario automático por tipo y color |
