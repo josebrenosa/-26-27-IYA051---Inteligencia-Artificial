@@ -6,32 +6,32 @@ Todos deben cumplir la misma cadena de visión clásica: adquisición → segmen
 
 ## Convocatoria de trabajos — Parcial de Visión Artificial Clásica
 ### 1. Objetivo
-El parcial consistirá en el diseño e implementación de un sistema de visión artificial clásica capaz de analizar automáticamente una escena cenital formada por objetos físicos colocados sobre un tapete.
-El objetivo no es utilizar modelos entrenados de aprendizaje automático, sino resolver el problema mediante técnicas clásicas de procesamiento de imagen, extracción de características y reglas de decisión.
-Cada alumno eligirá uno de los retos indicados en esta convocatoria, de tal forma que los retos se hayan distribuido equitativamente.
+El parcial consistirá en el diseño e implementación de un sistema de visión artificial clásica capaz de analizar automáticamente una escena cenital formada por objetos físicos colocados sobre un tapete.  
+El objetivo no es utilizar modelos entrenados de aprendizaje automático, sino resolver el problema mediante técnicas clásicas de procesamiento de imagen, extracción de características y reglas de decisión.  
+Cada alumno eligirá uno de los retos indicados en esta convocatoria, de tal forma que los retos se hayan distribuido equitativamente.  
 ### 2. Montaje común obligatorio
-Para garantizar que los trabajos tengan una dificultad comparable, todos utilizarán un montaje experimental equivalente.
+Para garantizar que los trabajos tengan una dificultad comparable, todos utilizarán un montaje experimental equivalente.  
 Requisitos: 
-Zona de trabajo	Tapete verde mate de Tamaño mínimo	0,50 × 0,50 m
-Cámara	Una única cámara fija en Posición cenital y aproximadamente perpendicular al tapete con un Campo de visión que debe visualizarse completamente la zona útil del tapete
+Zona de trabajo	Tapete verde mate de Tamaño mínimo	0,50 × 0,50 m  
+Cámara	Una única cámara fija en Posición cenital y aproximadamente perpendicular al tapete con un Campo de visión que debe visualizarse completamente la zona útil del tapete  
 Resolución a elección del alaumno, aconsejable que sea lo suficiente para distinguir la característica más pequeña necesaria para resolver el reto
-Iluminación a elección del alumno
-Objetos lo suficientemente pequeños/medianos y manipulables sobre el tapete
-Método de Visión artificial clásica: Clasificación	Características explícitas + árbol de decisión/reglas [Deep Learning o Clasificadores aprendidos tipo CNN/YOLO No están permitidos]
-La distancia \(x\) entre cámara y tapete no debería fijarse igual para todos, porque depende de la óptica y del sensor. El requisito será que el campo de visión cubra como mínimo los 0,50 × 0,50 m y que la resolución espacial resultante permita resolver el elemento discriminante más pequeño del reto. El alumno deberá justificar experimentalmente que su configuración satisface esta condición.
+Iluminación a elección del alumno  
+Objetos lo suficientemente pequeños/medianos y manipulables sobre el tapete  
+Método de Visión artificial clásica: Clasificación	Características explícitas + árbol de decisión/reglas [Deep Learning o Clasificadores aprendidos tipo CNN/YOLO No están permitidos]  
+La distancia \(x\) entre cámara y tapete no debería fijarse igual para todos, porque depende de la óptica y del sensor. El requisito será que el campo de visión cubra como mínimo los 0,50 × 0,50 m y que la resolución espacial resultante permita resolver el elemento discriminante más pequeño del reto. El alumno deberá justificar experimentalmente que su configuración satisface esta condición.  
 ## 3. Iluminación
-La iluminación forma parte del problema. El alumno puede elegir (o no) diseñar un sistema que proporcione una iluminación razonablemente uniforme sobre el tapete y minimice sombras y reflejos. 
+La iluminación forma parte del problema. El alumno puede elegir (o no) diseñar un sistema que proporcione una iluminación razonablemente uniforme sobre el tapete y minimice sombras y reflejos.   
 
 ## 4. Pipeline mínimo obligatorio
-Todos los proyectos deberán implementar conceptualmente:
-Imagen RGB → preprocesamiento → segmentación → detección de objetos → extracción de características → árbol de decisión → identificación → interpretación del resultado
-Entre las características permitidas se encuentran:
-- área;
-- perímetro;
-- circularidad;
-- relación de aspecto;
-- orientación;
-- excentricidad;
+Todos los proyectos deberán implementar conceptualmente:  
+Imagen RGB → preprocesamiento → segmentación → detección de objetos → extracción de características → árbol de decisión → identificación → interpretación del resultado  
+Entre las características permitidas se encuentran:  
+- área;  
+- perímetro;  
+- circularidad;  
+- relación de aspecto;  
+- orientación;  
+- excentricidad;  
 - número de componentes/regiones;
 - momentos;
 - centroide;
@@ -39,14 +39,15 @@ Entre las características permitidas se encuentran:
 - descriptores geométricos;
 - color en RGB, HSV, Lab u otro espacio justificable;
 - análisis de regiones internas del objeto.
-El alumno deberá poder explicar qué característica utiliza, cómo la calcula y por qué permite separar unas clases de otras.
+- etc.   
+El alumno deberá poder explicar qué característica utiliza, cómo la calcula y por qué permite separar unas clases de otras.  
 
 ## 5. Carga común de los retos
-Todos los retos tengan tres niveles de dificultad obligatorios:
-Nivel 1 — Detección. Localizar todos los objetos presentes en el tapete.
-Nivel 2 — Identificación. Asignar a cada objeto una clase mediante características visuales y un árbol de decisión.
-Nivel 3 — Interpretación. Obtener una conclusión de nivel superior: estado de una partida, suma, clasificación, pieza ausente, jugada válida, conteo, etc.
-Esto evita, por ejemplo, que "reconocer un dado" sea mucho más sencillo que interpretar una partida de dominó.
+Todos los retos tengan tres niveles de dificultad obligatorios:  
+Nivel 1 — Detección. Localizar todos los objetos presentes en el tapete.  
+Nivel 2 — Identificación. Asignar a cada objeto una clase mediante características visuales y un árbol de decisión.  
+Nivel 3 — Interpretación. Obtener una conclusión de nivel superior: estado de una partida, suma, clasificación, pieza ausente, jugada válida, conteo, etc.  
+Esto evita, por ejemplo, que "reconocer un dado" sea mucho más sencillo que interpretar una partida de dominó.  
 
 ## 6. Retos
 | Reto | Detección | Clasificación/identificación | Interpretación obligatoria |
