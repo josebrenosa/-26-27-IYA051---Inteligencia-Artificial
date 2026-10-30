@@ -2,7 +2,7 @@
 
 [a completar]
 
-Para el ejemplo de clustering gerárquico: 
+Para el ejemplo de clustering jerárquico: 
 
 - Qué información aporta el dendrograma mostrado en la práctica y cómo podrías usarlo para decidir el número óptimo de clusters?
 - En el dendrograma de la página 1, ¿qué indica la altura a la que se unen dos ramas y qué relación tiene con la distancia entre observaciones? 
